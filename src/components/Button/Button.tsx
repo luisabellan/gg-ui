@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-//import { variant } from 'styled-system';
 
 export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant: 'primary' | 'secondary';
 }
-const BaseButton = styled.button`
-  border-radius: 4px;
+const BaseButton = styled.button<Props>`
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   padding: 8px 32px;
 `;
 
-const ButtonComponent = styled.button<Props>`
+const ButtonComponent = styled(BaseButton)`
   background: ${({ variant }) =>
     variant === 'primary' ? '#11521a' : '#101558'};
   border: none;
@@ -23,7 +23,7 @@ const ButtonComponent = styled.button<Props>`
 
   &:hover {
     background: ${({ variant }) =>
-      variant === 'primary' ? '#aedfb5' : '#a3a7db'};
+      variant === 'primary' ? '#5fa86a' : '#686db1'};
     color:'#fff'};
   }
 `;

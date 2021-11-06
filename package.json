@@ -75,6 +75,5 @@
     "styled-components": "^5"
   },
   "dependencies": {
-    "styled-system": "^5.1.5"
   }
 }
