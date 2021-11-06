@@ -1,15 +1,37 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import React, { ReactNode } from 'react';
+import styled from 'styled-components';
+import { variant } from 'styled-system';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
-  /** custom content, defaults to 'the snozzberries taste like snozzberries' */
-  children?: ReactChild;
+export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  variant: 'primary' | 'secondary';
 }
+const BaseButton = styled.button<Props>`
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 8px 32px;
+`;
 
-// Please do not use types off of a default export module or else Storybook Docs will suffer.
-// see: https://github.com/storybookjs/storybook/issues/9556
-/**
- * A custom Thing component. Neat!
- */
-export const Thing: FC<Props> = ({ children }) => {
-  return <div>{children || `the snozzberries taste like snozzberries`}</div>;
+const ButtonComponent = styled(BaseButton)`
+  background: ${({ variant }) =>
+    variant === 'primary' ? '#11521a' : '#101558'};
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: ${({ variant }) =>
+      variant === 'primary' ? '#aedfb5' : '#a3a7db'};
+    color:'#fff'};
+  }
+`;
+
+export const Button = ({ children, variant, ...props }: Props) => {
+  return (
+    <ButtonComponent variant={variant} {...props}>
+      {children}
+    </ButtonComponent>
+  );
 };
