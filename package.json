@@ -79,5 +79,9 @@
   },
   "resolutions": {
     "styled-components": "^5"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.3.12",
+    "@storybook/preset-create-react-app": "^3.2.0"
   }
 }

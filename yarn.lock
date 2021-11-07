@@ -2003,6 +2003,28 @@
     "@statoscope/types" "5.14.1"
     highcharts "^9.2.2"
 
+"@storybook/addon-a11y@^6.3.12":
+  version "6.3.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.3.12.tgz#2f930fc84fc275a4ed43a716fc09cc12caf4e110"
+  integrity sha512-q1NdRHFJV6sLEEJw0hatCc5ZIthELqM/AWdrEWDyhcJNyiq7Tq4nKqQBMTQSYwHiUAmxVgw7i4oa1vM2M51/3g==
+  dependencies:
+    "@storybook/addons" "6.3.12"
+    "@storybook/api" "6.3.12"
+    "@storybook/channels" "6.3.12"
+    "@storybook/client-api" "6.3.12"
+    "@storybook/client-logger" "6.3.12"
+    "@storybook/components" "6.3.12"
+    "@storybook/core-events" "6.3.12"
+    "@storybook/theming" "6.3.12"
+    axe-core "^4.2.0"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    lodash "^4.17.20"
+    react-sizeme "^3.0.1"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-actions@6.3.12":
   version "6.3.12"
   resolved "https://registry.npmjs.org/@storybook/addon-actions/-/addon-actions-6.3.12.tgz"
@@ -2110,7 +2132,7 @@
 
 "@storybook/addon-essentials@^6.3.12":
   version "6.3.12"
-  resolved "https://registry.npmjs.org/@storybook/addon-essentials/-/addon-essentials-6.3.12.tgz"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.3.12.tgz#445cc4bc2eb9168a9e5de1fdfb5ef3b92974e74b"
   integrity sha512-PK0pPE0xkq00kcbBcFwu/5JGHQTu4GvLIHfwwlEGx6GWNQ05l6Q+1Z4nE7xJGv2PSseSx3CKcjn8qykNLe6O6g==
   dependencies:
     "@storybook/addon-actions" "6.3.12"
@@ -2151,7 +2173,7 @@
 
 "@storybook/addon-links@^6.3.12":
   version "6.3.12"
-  resolved "https://registry.npmjs.org/@storybook/addon-links/-/addon-links-6.3.12.tgz"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.3.12.tgz#72a38069913b4e9a19d6f4159bb4846ad560c400"
   integrity sha512-NfOGEm0+QxIrAXCa05LOXmxLtI+RlcDqHXZ1jNNj8mjeRoG1nX3qhkB8PWWIBbPuz+bktLV9ox8UZj0W6+ZPOQ==
   dependencies:
     "@storybook/addons" "6.3.12"
@@ -2709,6 +2731,19 @@
   integrity sha512-HkZ+abtZ3W6JbGPS6K7OSnNXbwaTwNNd5R02kRs4gV9B29XsBPDtFT6vIwzM3tmVQC7ihL5a8ceWp2OvzaNOuw==
   dependencies:
     core-js "^3.8.2"
+
+"@storybook/preset-create-react-app@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@storybook/preset-create-react-app/-/preset-create-react-app-3.2.0.tgz#660597906847e38e9d886241d3d8e2ecc770a2eb"
+  integrity sha512-lLoWCGr5cV+JNDRKYHC2gD+P2eyBqdN8qhmBa+PxDgPSNKfgUf9Wnoh+C7WTG5q2DEeR9SvUpQpZomX9DDQa4Q==
+  dependencies:
+    "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
+    "@types/babel__core" "^7.1.7"
+    "@types/webpack" "^4.41.13"
+    babel-plugin-react-docgen "^4.1.0"
+    pnp-webpack-plugin "^1.6.4"
+    react-docgen-typescript-plugin "^1.0.0"
+    semver "^7.3.5"
 
 "@storybook/react-docgen-typescript-plugin@1.0.2-canary.253f8c1.0":
   version "1.0.2-canary.253f8c1.0"
@@ -3350,7 +3385,7 @@
     "@types/source-list-map" "*"
     source-map "^0.7.3"
 
-"@types/webpack@^4.41.26", "@types/webpack@^4.41.8":
+"@types/webpack@^4.41.13", "@types/webpack@^4.41.26", "@types/webpack@^4.41.8":
   version "4.41.31"
   resolved "https://registry.npmjs.org/@types/webpack/-/webpack-4.41.31.tgz"
   integrity sha512-/i0J7sepXFIp1ZT7FjUGi1eXMCg8HCCzLJEQkKsOtbJFontsJLolBcDC+3qxn5pPwiCt1G0ZdRmYRzNBtvpuGQ==
@@ -4192,7 +4227,7 @@ aws4@^1.8.0:
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axe-core@^4.0.2:
+axe-core@^4.0.2, axe-core@^4.2.0:
   version "4.3.5"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.3.5.tgz"
   integrity sha512-WKTW1+xAzhMS5dJsxWkliixlO/PqC4VhmO9T4juNYcaTg9jzWiJsou6m5pxWYGfigWbwzJWeFY6z47a+4neRXA==
@@ -4397,7 +4432,7 @@ babel-plugin-polyfill-regenerator@^0.2.3:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.4"
 
-babel-plugin-react-docgen@^4.2.1:
+babel-plugin-react-docgen@^4.1.0, babel-plugin-react-docgen@^4.2.1:
   version "4.2.1"
   resolved "https://registry.npmjs.org/babel-plugin-react-docgen/-/babel-plugin-react-docgen-4.2.1.tgz"
   integrity sha512-UQ0NmGHj/HAqi5Bew8WvNfCk8wSsmdgNd8ZdMjBCICtyCJCq9LiqgqvjCYe570/Wg7AQArSq1VQ60Dd/CHN7mQ==
@@ -11227,6 +11262,13 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
+pnp-webpack-plugin@^1.6.4:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/pnp-webpack-plugin/-/pnp-webpack-plugin-1.7.0.tgz#65741384f6d8056f36e2255a8d67ffc20866f5c9"
+  integrity sha512-2Rb3vm+EXble/sMXNSu6eoBx8e79gKqhNq9F5ZWW6ERNCTE/Q0wQNne5541tE5vKjfM8hpNCYL+LGc1YTfI0dg==
+  dependencies:
+    ts-pnp "^1.1.6"
+
 polished@^3.3.1:
   version "3.7.2"
   resolved "https://registry.npmjs.org/polished/-/polished-3.7.2.tgz"
@@ -11925,6 +11967,25 @@ react-dev-utils@^11.0.3:
     shell-quote "1.7.2"
     strip-ansi "6.0.0"
     text-table "0.2.0"
+
+react-docgen-typescript-plugin@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-1.0.0.tgz#f3b13df1acf3126957c689c47cd8552d42734feb"
+  integrity sha512-Akc7EtryOA4d2yOX27B5ii+hyf/k15ymb01uB+VnRgtTAdfeDCmNPvyLbRJ6pRNYOuFlEBe1YfCH73bTPtpYVQ==
+  dependencies:
+    debug "^4.1.1"
+    endent "^2.0.1"
+    find-cache-dir "^3.3.1"
+    flat-cache "^3.0.4"
+    micromatch "^4.0.2"
+    react-docgen-typescript "^1.22.0"
+    tslib "^2.0.0"
+    webpack-sources "^2.2.0"
+
+react-docgen-typescript@^1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.22.0.tgz#00232c8e8e47f4437cac133b879b3e9437284bee"
+  integrity sha512-MPLbF8vzRwAG3GcjdL+OHQlhgtWsLTXs+7uJiHfEeT3Ur7IsZaNYqRTLQ9sj2nB6M6jylcPCeCmH7qbszJmecg==
 
 react-docgen-typescript@^2.0.0:
   version "2.1.1"
@@ -13070,7 +13131,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-source-list-map@^2.0.0:
+source-list-map@^2.0.0, source-list-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   integrity sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==
@@ -14630,6 +14691,14 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
+
+webpack-sources@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.3.1.tgz#570de0af163949fe272233c2cefe1b56f74511fd"
+  integrity sha512-y9EI9AO42JjEcrTJFOYmVywVZdKVUfOvDUPsJea5GIr1JOEGFVqwlY2K098fFoIjOkDzHn2AjRvM8dsBZu+gCA==
+  dependencies:
+    source-list-map "^2.0.1"
+    source-map "^0.6.1"
 
 webpack-sources@^3.2.0:
   version "3.2.1"

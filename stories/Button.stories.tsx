@@ -9,7 +9,7 @@ const meta: Meta = {
   argTypes: {
     onClick: { action: 'clicked' },
     children: {
-      defaultValue: 'Default Button',
+      defaultValue: 'Default Text',
       control: {
         type: 'text',
       },
@@ -35,20 +35,25 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 
 Default.args = {
+  default: true,
   children: 'Default Button',
-  onClick: action('clicked'),
+  onClick: action('default click'),
   variant: undefined,
 };
 
 Primary.args = {
+  ...Default.args,
+  primary: true,
   children: 'Primary Button',
-  onClick: action('clicked'),
+  onClick: action('primary click'),
   variant: 'primary',
 };
 
 Secondary.args = {
+  ...Default.args,
+  secondary: true,
   children: 'Secondary Button',
-  variant: 'secondary',
   onClick: action('secondary click'),
+  variant: 'secondary ',
 };
 

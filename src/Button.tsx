@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Provides a text for the button */
   children?: ReactNode;
+  /** Available variants for you to use */
   variant?: 'primary' | 'secondary' | undefined;
 }
 const BaseButton = styled.button<ButtonProps>`
@@ -38,7 +40,7 @@ const ButtonComponent = styled(BaseButton)`
       variant === 'primary' ? '#5fa86a' : '#686db1'};
   }
 `;
-
+/** This is our Button */
 export function Button({ color, children, variant, ...props }: ButtonProps) {
   return (
     <ButtonComponent color={color} variant={variant} {...props}>
