@@ -5,8 +5,7 @@ import { Primary as Button } from '../stories/Button.stories';
 
 describe('Button', () => {
   it('renders a default button with children without crashing', () => {
-    //render(<Button />);
-    render(<Button>text</Button>);
+    render(<Button />);
 
     //  there is a button and it's visible
     const button = screen.getByRole('button');
