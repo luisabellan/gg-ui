@@ -36,7 +36,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "gg-ui",
+  "name": "@luisabellan/gg-ui",
   "author": "Luis Abellan",
   "module": "dist/gg-ui.esm.js",
   "size-limit": [
