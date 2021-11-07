@@ -44,7 +44,7 @@ const ButtonComponent = styled(BaseButton)`
 export function Button({ color, children, variant, ...props }: ButtonProps) {
   return (
     <ButtonComponent color={color} variant={variant} {...props}>
-      {children}
+      {children = "send"}
     </ButtonComponent>
   );
 };
