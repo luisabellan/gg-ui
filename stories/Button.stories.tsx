@@ -35,6 +35,7 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 
 Default.args = {
+  children: 'Default Button',
   onClick: action('clicked'),
   variant: undefined,
 };
