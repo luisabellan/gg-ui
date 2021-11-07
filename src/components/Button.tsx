@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   variant?: 'primary' | 'secondary' | undefined;
 }
-const BaseButton = styled.button<Props>`
+const BaseButton = styled.button<ButtonProps>`
   background: grey;
   border: none;
   border-radius: 8px;
@@ -38,7 +39,7 @@ const ButtonComponent = styled(BaseButton)`
   }
 `;
 
-export const Button = ({ color, children, variant, ...props }: Props) => {
+export function Button({ color, children, variant, ...props }: ButtonProps) {
   return (
     <ButtonComponent color={color} variant={variant} {...props}>
       {children}
