@@ -42,7 +42,6 @@ Default.args = {
 };
 
 Primary.args = {
-  ...Default.args,
   primary: true,
   children: 'Primary Button',
   onClick: action('primary click'),
@@ -50,7 +49,6 @@ Primary.args = {
 };
 
 Secondary.args = {
-  ...Default.args,
   secondary: true,
   children: 'Secondary Button',
   onClick: action('secondary click'),
