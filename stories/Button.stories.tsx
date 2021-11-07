@@ -35,21 +35,18 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 
 Default.args = {
-  default: true,
   children: 'Default Button',
   onClick: action('default click'),
   variant: undefined,
 };
 
 Primary.args = {
-  primary: true,
   children: 'Primary Button',
   onClick: action('primary click'),
   variant: 'primary',
 };
 
 Secondary.args = {
-  secondary: true,
   children: 'Secondary Button',
   onClick: action('secondary click'),
   variant: 'secondary ',
