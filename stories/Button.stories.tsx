@@ -49,6 +49,6 @@ Primary.args = {
 Secondary.args = {
   children: 'Secondary Button',
   onClick: action('secondary click'),
-  variant: 'secondary ',
+  variant: 'secondary',
 };
 
