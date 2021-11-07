@@ -17,14 +17,13 @@ const ButtonComponent = styled(BaseButton)`
   background: ${({ variant }) =>
     variant === 'primary' ? '#11521a' : '#101558'};
   border: none;
-  color: white;
+  color: 'white';
   font-weight: 600;
   transition: all 0.2s ease-in-out;
 
   &:hover {
     background: ${({ variant }) =>
       variant === 'primary' ? '#5fa86a' : '#686db1'};
-    color:'#fff'};
   }
 `;
 
