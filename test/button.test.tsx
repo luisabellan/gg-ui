@@ -4,34 +4,21 @@ import '@testing-library/jest-dom';
 import { Primary as Button } from '../stories/Button.stories';
 
 describe('Button', () => {
-  it('renders a button that has a child element for which we do not provide a text for without crashing', () => {
-    render(<Button />);
-  });
+  it('renders a default button with children without crashing', () => {
+    //render(<Button />);
+    render(<Button>text</Button>);
 
-  it('renders a primary button without crashing', () => {
-    render(
-      <Button variant="primary">
-        <span>Send</span>
-      </Button>
-    );
-    const button = screen.getByRole('button');
-    const span = screen.getByText(/Send/i);
     //  there is a button and it's visible
+    const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button).toBeVisible();
 
-    //  the button has a child span and it's visible
-    expect(span).toBeInTheDocument();
-    expect(span).toBeVisible();
-
-    // The button has the color we expect for a primary variant Button
-    // The span element inside the button has the color we expect for a primary variant Button
-
     expect(button).toHaveStyle({
-      backgroundColor: '#11521a',
+      backgroundColor: 'grey',
       color: 'white',
     });
   });
+
 
   it('renders a primary button without crashing', () => {
     render(

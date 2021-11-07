@@ -9,7 +9,7 @@ const meta: Meta = {
   argTypes: {
     onClick: { action: 'clicked' },
     children: {
-      defaultValue: 'Primary Button',
+      defaultValue: 'Default Button',
       control: {
         type: 'text',
       },
@@ -30,13 +30,24 @@ const Template: Story<Props> = (args) => <Button {...args} />;
 //Default.args = {
 //  children: 'Button',
 //};
-
+export const Default = Template.bind({});
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 
+Default.args = {
+  onClick: action('clicked'),
+  variant: undefined,
+};
+
+Primary.args = {
+  children: 'Primary Button',
+  onClick: action('clicked'),
+  variant: 'primary',
+};
+
 Secondary.args = {
-  variant: 'secondary',
   children: 'Secondary Button',
+  variant: 'secondary',
   onClick: action('secondary click'),
 };
 

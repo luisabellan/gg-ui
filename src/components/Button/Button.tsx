@@ -6,6 +6,7 @@ export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | undefined;
 }
 const BaseButton = styled.button<Props>`
+  background: grey;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -15,8 +16,18 @@ const BaseButton = styled.button<Props>`
 `;
 
 const ButtonComponent = styled(BaseButton)`
-  background: ${({ variant }) =>
-    variant === 'primary' ? '#11521a' : '#101558'};
+  background: ${({ variant }) => {
+    if (variant === 'primary') {
+      return '#11521a';
+    }
+    if (variant === 'secondary') {
+      return '#101558';
+    }
+    return 'grey';
+  }};
+
+  color: ${({ color }) => (color ? color : 'white')};
+
   border: none;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
@@ -27,9 +38,9 @@ const ButtonComponent = styled(BaseButton)`
   }
 `;
 
-export const Button = ({ children, variant, ...props }: Props) => {
+export const Button = ({ color, children, variant, ...props }: Props) => {
   return (
-    <ButtonComponent variant={variant} {...props}>
+    <ButtonComponent color={color} variant={variant} {...props}>
       {children}
     </ButtonComponent>
   );
