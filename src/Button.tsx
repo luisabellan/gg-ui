@@ -28,6 +28,11 @@ const ButtonComponent = styled(BaseButton)`
       return '#663d08';
     } else if (variant === 'default') {
       return 'grey';
+  } else {
+    return
+  }
+
+}
   }
   }};
 

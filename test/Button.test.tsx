@@ -19,7 +19,7 @@ describe('Button', () => {
 
     // normal state styles
     expect(button).toHaveStyle({
-      backgroundColor: 'grey',
+      backgroundColor: '#353434',
       color: 'white',
     });
 
@@ -96,12 +96,11 @@ describe('Button', () => {
   it('renders a tertiary button without crashing', () => {
 
     render(
-      <Button variant="tertiary">
-        <span>send</span>
+      <Button variant="tertiary">Accept
       </Button>
     );
     const button = screen.getByRole('button');
-    const buttonText = screen.getByText('send');
+    const buttonText = screen.getByText('Accept');
     //  there is a button and it's visible
     expect(button).toBeInTheDocument();
     expect(button).toBeVisible();
