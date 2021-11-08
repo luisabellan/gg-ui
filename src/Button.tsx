@@ -35,10 +35,7 @@ const ButtonComponent = styled(BaseButton)`
   font-weight: 600;
   transition: all 0.2s ease-in-out;
 
-  &:hover {
-    background: ${({ variant }) =>
-      variant === 'primary' ? '#5fa86a' : '#686db1'};
-  }
+
 `;
 /** This is our Button */
 export function Button({ color, children, variant, ...props }: ButtonProps) {
