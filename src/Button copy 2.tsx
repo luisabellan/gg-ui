@@ -6,10 +6,10 @@ export interface ButtonProps
   /** Provides a text for the button */
   children?: ReactNode;
   /** Available variants for you to use */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'default';
+  variant?: 'primary' | 'secondary' | 'tertiary' | undefined;
 }
 const BaseButton = styled.button<ButtonProps>`
-  background: #353434;
+  background: grey;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -17,33 +17,23 @@ const BaseButton = styled.button<ButtonProps>`
   padding: 8px 32px;
   color: white;
 `;
-
 const ButtonComponent = styled(BaseButton)`
-  background: ${({ variant }) => {
+  ${({ variant }): any => {
     if (variant === 'primary') {
-      return '#11521a';
+      background: '#11521a';
     } else if (variant === 'secondary') {
-      return '#101558';
+      background: '#101558';
     } else if (variant === 'tertiary') {
-      return '#663d08';
-    } else if (variant === 'default') {
-      return 'grey';
+      background: '#663d08';
+    } else if (variant === 'default') background: 'grey';
   }
-  }};
-
-  color: ${({ color }) => (color ? color : 'white')};
-
-  border: none;
-  font-weight: 600;
-  transition: all 0.2s ease-in-out;
-
-
+}};
 `;
 /** This is our Button */
-export function Button({ color, children, variant, ...props }: ButtonProps) {
+export function Button({ color, children = 'send', variant, ...props }: ButtonProps) {
   return (
     <ButtonComponent color={color} variant={variant} {...props}>
-      {children || "send"}
+      {children}
     </ButtonComponent>
   );
 };
