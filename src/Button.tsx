@@ -6,10 +6,10 @@ export interface ButtonProps
   /** Provides a text for the button */
   children?: ReactNode;
   /** Available variants for you to use */
-  variant?: 'primary' | 'secondary' | undefined;
+  variant?: 'primary' | 'secondary' | 'default';
 }
 const BaseButton = styled.button<ButtonProps>`
-  background: grey;
+  background: #353434;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -26,7 +26,12 @@ const ButtonComponent = styled(BaseButton)`
     if (variant === 'secondary') {
       return '#101558';
     }
+  if (variant === 'tertiary') {
+    return '#663d08';
+  }
+  if (variant === 'default' || '') {
     return 'grey';
+  }
   }};
 
   color: ${({ color }) => (color ? color : 'white')};

@@ -91,10 +91,36 @@ describe('Button', () => {
       color: 'white',
     });
 
-
   });
 
+  it('renders a tertiary button without crashing', () => {
 
+    render(
+      <Button variant="tertiary">
+        <span>send</span>
+      </Button>
+    );
+    const button = screen.getByRole('button');
+    const buttonText = screen.getByText('send');
+    //  there is a button and it's visible
+    expect(button).toBeInTheDocument();
+    expect(button).toBeVisible();
+
+    //  the button has a child span and it's visible
+    expect(buttonText).toBeInTheDocument();
+    expect(buttonText).toBeVisible();
+
+    // The button has the color we expect for a primary variant Button
+    // The span element inside the button has the color we expect for a primary variant Button
+
+    // normal state styles
+    expect(button).toHaveStyle({
+      backgroundColor: '#663d08',
+      color: 'white',
+    });
+
+
+  });
 
   it('calls "onClick" prop on click for a primary button', () => {
     // Render new instance in every test to prevent leaking state
@@ -117,6 +143,24 @@ describe('Button', () => {
     const onClick = jest.fn();
     render(
       <Button variant="secondary" onClick={onClick}>
+        <span>send</span>
+      </Button>
+    );
+    const button = screen.getByRole('button');
+
+    // before click
+    expect(onClick).not.toHaveBeenCalled();
+    // click
+    fireEvent.click(button);
+    // after click
+    expect(onClick).toHaveBeenCalled();
+  });
+
+  it('calls "onClick" prop on click for a tertiary button', () => {
+    // Render new instance in every test to prevent leaking state
+    const onClick = jest.fn();
+    render(
+      <Button variant="tertiary" onClick={onClick}>
         <span>send</span>
       </Button>
     );
