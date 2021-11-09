@@ -19,6 +19,9 @@ const BaseButton = styled.button<ButtonProps>`
 `;
 
 const ButtonComponent = styled(BaseButton)`
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
   background: ${({ variant }) => {
     if (variant === 'primary') {
       return '#11521a';
@@ -28,26 +31,19 @@ const ButtonComponent = styled(BaseButton)`
       return '#663d08';
     } else if (variant === 'default') {
       return 'grey';
-  } else {
-    return
-  }
+    } else {
+      return
+    }
 
-}
-  }
   }};
-
-  color: ${({ color }) => (color ? color : 'white')};
-
-  border: none;
-  font-weight: 600;
-  transition: all 0.2s ease-in-out;
+  
 
 
 `;
 /** This is our Button */
-export function Button({ color, children, variant, ...props }: ButtonProps) {
+export function Button({  color, children, variant, ...props }: ButtonProps) {
   return (
-    <ButtonComponent color={color} variant={variant} {...props}>
+    <ButtonComponent color={color||'white'} variant={variant} {...props}>
       {children || "send"}
     </ButtonComponent>
   );
