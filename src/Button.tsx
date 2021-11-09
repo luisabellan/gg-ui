@@ -15,7 +15,7 @@ const BaseButton = styled.button<ButtonProps>`
   cursor: pointer;
   font-size: 1rem;
   padding: 8px 32px;
-  color: white;
+  color: ${({ color }) => color || 'white'};
 `;
 
 const ButtonComponent = styled(BaseButton)`
@@ -43,7 +43,7 @@ const ButtonComponent = styled(BaseButton)`
 /** This is our Button */
 export function Button({  color, children, variant, ...props }: ButtonProps) {
   return (
-    <ButtonComponent color={color||'white'} variant={variant} {...props}>
+    <ButtonComponent color={color} variant={variant} {...props}>
       {children || "send"}
     </ButtonComponent>
   );
