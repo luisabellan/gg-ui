@@ -6,30 +6,45 @@ export interface ButtonProps
   /** Provides a text for the button */
   children?: ReactNode;
   /** Available variants for you to use */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'default';
+  background?: 'primary' | 'secondary' | 'tertiary' | 'default';
 }
 const BaseButton = styled.button<ButtonProps>`
-  background: #353434;
+  background: ${({ background }) => {
+    if (background === 'primary') {
+      return '#11521a';
+    } else if (background === 'secondary') {
+      return '#101558';
+    } else if (background === 'tertiary') {
+      return '#663d08';
+    } else if (background === 'default') {
+      return '#353434';
+    } else {
+      return '#353434';
+    }
+  }};
+
+  color: ${({ color }) => color || 'white'};
+
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   padding: 8px 32px;
-  color: ${({ color }) => color || 'white'};
 `;
 
 const ButtonComponent = styled(BaseButton)`
   border: none;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
-  background: ${({ variant }) => {
-    if (variant === 'primary') {
+background: ${
+  ({ background }) => {
+    if (background === 'primary') {
       return '#11521a';
-    } else if (variant === 'secondary') {
+    } else if (background === 'secondary') {
       return '#101558';
-    } else if (variant === 'tertiary') {
+    } else if (background === 'tertiary') {
       return '#663d08';
-    } else if (variant === 'default') {
+    } else if (background === 'default') {
       return 'grey';
     } else {
       return
@@ -41,9 +56,9 @@ const ButtonComponent = styled(BaseButton)`
 
 `;
 /** This is our Button */
-export function Button({  color, children, variant, ...props }: ButtonProps) {
+export function Button({ color, children, background, ...props }: ButtonProps) {
   return (
-    <ButtonComponent color={color} variant={variant} {...props}>
+    <ButtonComponent color={color} background={background} {...props}>
       {children || "send"}
     </ButtonComponent>
   );

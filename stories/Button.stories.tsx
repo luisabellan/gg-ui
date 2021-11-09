@@ -38,23 +38,23 @@ export const Tertiary = Template.bind({});
 Default.args = {
   children: 'Default Button',
   onClick: action('default click'),
-  variant: undefined,
+  background: undefined,
 };
 
 Primary.args = {
   children: 'Primary Button',
   onClick: action('primary click'),
-  variant: 'primary',
+  background: 'primary',
 };
 
 Secondary.args = {
   children: 'Secondary Button',
   onClick: action('secondary click'),
-  variant: 'secondary',
+  background: 'secondary',
 };
 Tertiary.args = {
   children: 'Tertiary Button',
   onClick: action('tertiary click'),
-  variant: 'tertiary',
+  background: 'tertiary',
 };
 

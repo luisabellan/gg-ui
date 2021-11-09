@@ -38,7 +38,7 @@ describe('Button', () => {
   it('renders a primary button without crashing', () => {
 
     render(
-      <Button variant="primary">
+      <Button background="primary">
         <span>send</span>
       </Button>
     );
@@ -52,8 +52,8 @@ describe('Button', () => {
     expect(buttonText).toBeInTheDocument();
     expect(buttonText).toBeVisible();
 
-    // The button has the color we expect for a primary variant Button
-    // The span element inside the button has the color we expect for a primary variant Button
+    // The button has the color we expect for a primary background Button
+    // The span element inside the button has the color we expect for a primary background Button
 
     // normal state styles
     expect(button).toHaveStyle({
@@ -68,7 +68,7 @@ describe('Button', () => {
   it('renders a secondary button without crashing', () => {
 
     render(
-      <Button variant="secondary">
+      <Button background="secondary">
         <span>send</span>
       </Button>
     );
@@ -82,8 +82,8 @@ describe('Button', () => {
     expect(buttonText).toBeInTheDocument();
     expect(buttonText).toBeVisible();
 
-    // The button has the color we expect for a primary variant Button
-    // The span element inside the button has the color we expect for a primary variant Button
+    // The button has the color we expect for a primary background Button
+    // The span element inside the button has the color we expect for a primary background Button
 
     // normal state styles
     expect(button).toHaveStyle({
@@ -96,7 +96,7 @@ describe('Button', () => {
   it('renders a tertiary button without crashing', () => {
 
     render(
-      <Button variant="tertiary">Accept
+      <Button background="tertiary">Accept
       </Button>
     );
     const button = screen.getByRole('button');
@@ -109,8 +109,8 @@ describe('Button', () => {
     expect(buttonText).toBeInTheDocument();
     expect(buttonText).toBeVisible();
 
-    // The button has the color we expect for a primary variant Button
-    // The span element inside the button has the color we expect for a primary variant Button
+    // The button has the color we expect for a primary background Button
+    // The span element inside the button has the color we expect for a primary background Button
 
     // normal state styles
     expect(button).toHaveStyle({
@@ -126,7 +126,7 @@ describe('Button', () => {
     const onClick = jest.fn();
 
     render(
-      <Button variant="primary" onClick={onClick}>
+      <Button background="primary" onClick={onClick}>
         <span>send</span>
       </Button>
     );
@@ -141,7 +141,7 @@ describe('Button', () => {
     // Render new instance in every test to prevent leaking state
     const onClick = jest.fn();
     render(
-      <Button variant="secondary" onClick={onClick}>
+      <Button background="secondary" onClick={onClick}>
         <span>send</span>
       </Button>
     );
@@ -159,7 +159,7 @@ describe('Button', () => {
     // Render new instance in every test to prevent leaking state
     const onClick = jest.fn();
     render(
-      <Button variant="tertiary" onClick={onClick}>
+      <Button background="tertiary" onClick={onClick}>
         <span>send</span>
       </Button>
     );
